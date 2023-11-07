@@ -115,7 +115,6 @@ frappe.ui.form.on("Journal Entry", {
 	multi_currency: function(frm) {
 		erpnext.journal_entry.toggle_fields_based_on_currency(frm);
 	},
-
 	posting_date: function(frm) {
 		if(!frm.doc.multi_currency || !frm.doc.posting_date) return;
 
@@ -123,7 +122,6 @@ frappe.ui.form.on("Journal Entry", {
 			erpnext.journal_entry.set_exchange_rate(frm, row.doctype, row.name);
 		})
 	},
-
 	company: function(frm) {
 		frappe.call({
 			method: "frappe.client.get_value",
